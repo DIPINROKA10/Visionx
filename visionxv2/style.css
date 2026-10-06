@@ -11,11 +11,15 @@ html {
 }
 body {
   font-family: "Inter", sans-serif;
-  background: #ffffff;
-  color: #0f0f14;
+  background: var(--bg);
+  color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
   position: relative;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 /* ===== BG TYPOGRAPHY ===== */
@@ -60,7 +64,7 @@ body {
 .bg-orb:nth-child(1) {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, #7c3aed, #a78bfa);
+  background: radial-gradient(circle, rgba(59,130,246,0.2), transparent);
   top: -10%;
   left: -5%;
   animation: floatOrb1 18s ease-in-out infinite;
@@ -68,7 +72,7 @@ body {
 .bg-orb:nth-child(2) {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, #3b82f6, #60a5fa);
+  background: radial-gradient(circle, rgba(59,130,246,0.15), transparent);
   top: 50%;
   right: -8%;
   animation: floatOrb2 22s ease-in-out infinite;
@@ -76,7 +80,7 @@ body {
 .bg-orb:nth-child(3) {
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, #ec4899, #f472b6);
+  background: radial-gradient(circle, rgba(6,182,212,0.15), transparent);
   bottom: 10%;
   left: 10%;
   animation: floatOrb3 20s ease-in-out infinite;
@@ -84,7 +88,7 @@ body {
 .bg-orb:nth-child(4) {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, #8b5cf6, #c084fc);
+  background: radial-gradient(circle, rgba(59,130,246,0.1), transparent);
   top: 30%;
   left: 40%;
   animation: floatOrb4 25s ease-in-out infinite;
@@ -92,7 +96,7 @@ body {
 .bg-orb:nth-child(5) {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, #06b6d4, #22d3ee);
+  background: radial-gradient(circle, rgba(59,130,246,0.2), transparent);
   bottom: 30%;
   right: 15%;
   animation: floatOrb5 16s ease-in-out infinite;
@@ -162,19 +166,20 @@ img {
 }
 ::selection {
   background: #7c3aed;
-  color: #fff;
+  color: var(--text);
 }
 
 :root {
   --white: #ffffff;
-  --bg: #f5f5fa;
-  --text: #0f0f14;
-  --muted: #6b6b80;
-  --purple: #7c3aed;
-  --purple-light: #ede9ff;
-  --purple-mid: #a78bfa;
-  --border: #e8e8f0;
-  --card-bg: #fafafe;
+  --bg: #05070D;
+  --bg-navy: #0B1020;
+  --text: #F5F7FA;
+  --muted: #A7B0C0;
+  --purple: #3b82f6; /* Renamed to Electric Blue for HTML compat */
+  --purple-light: rgba(59, 130, 246, 0.1);
+  --purple-mid: #60a5fa;
+  --border: rgba(59, 130, 246, 0.2);
+  --card-bg: #0B1020;
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
@@ -184,7 +189,7 @@ img {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--white);
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +225,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #000;
+  background: rgba(5, 7, 13, 0.85);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid #222;
 }
@@ -231,7 +236,7 @@ nav {
   font-weight: 800;
   font-size: 18px;
   letter-spacing: -0.03em;
-  color: #fff;
+  color: var(--text);
 }
 .nav-logo-img {
   width: 36px;
@@ -250,7 +255,7 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover {
-  color: #fff;
+  color: var(--text);
 }
 .nav-socials {
   display: flex;
@@ -260,7 +265,7 @@ nav {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--white);
+  background: var(--bg);
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -353,9 +358,7 @@ h2 {
   line-height: 1.08;
   margin-bottom: 14px;
 }
-h2 .purple {
-  color: var(--purple);
-}
+h2 .purple { color: var(--purple); text-shadow: 0 0 10px rgba(59,130,246,0.3); }
 .section-sub {
   font-size: 15px;
   color: var(--muted);
@@ -414,7 +417,7 @@ h2 .purple {
   display: flex;
   align-items: stretch;
   max-width: 100%;
-  background: var(--white);
+  background: var(--bg);
   position: relative;
   overflow: hidden;
 }
@@ -442,9 +445,7 @@ h1 {
   margin-bottom: 24px;
   color: var(--text);
 }
-h1 .purple {
-  color: var(--purple);
-}
+h1 .purple { color: var(--purple); text-shadow: 0 0 10px rgba(59,130,246,0.3); }
 .hero-desc {
   font-size: 16px;
   color: var(--muted);
@@ -469,7 +470,7 @@ h1 .purple {
   border-radius: 6px;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  background: var(--white);
+  background: var(--bg);
   outline: none;
   transition: border-color 0.2s;
 }
@@ -482,7 +483,7 @@ h1 .purple {
 .btn-primary {
   padding: 13px 24px;
   background: var(--purple);
-  color: #fff;
+  color: var(--text);
   border: none;
   border-radius: 6px;
   font-family: "Inter", sans-serif;
@@ -507,7 +508,7 @@ h1 .purple {
 .hero-img-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--purple-light) 0%, #f0edff 100%);
+  background: linear-gradient(135deg, var(--bg-navy) 0%, rgba(59,130,246,0.05) 100%); border: 1px solid var(--border);
   border-radius: 24px;
 }
 .hero-visual-grid {
@@ -520,7 +521,7 @@ h1 .purple {
   width: 100%;
 }
 .hero-card {
-  background: var(--white);
+  background: var(--bg);
   border-radius: 12px;
   padding: 20px;
   border: 1px solid var(--border);
@@ -538,7 +539,7 @@ h1 .purple {
   justify-content: center;
   font-weight: 700;
   font-size: 16px;
-  color: #fff;
+  color: var(--text);
   margin-bottom: 12px;
 }
 .av-purple {
@@ -581,7 +582,7 @@ h1 .purple {
   background: var(--purple);
   border-radius: 12px;
   padding: 20px;
-  color: #fff;
+  color: var(--text);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -607,7 +608,7 @@ h1 .purple {
 
 /* ===== STATS ===== */
 .stats-bar {
-  background: var(--white);
+  background: var(--bg-navy);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 40px 60px;
@@ -719,7 +720,7 @@ h1 .purple {
 
 /* ===== TEAM ===== */
 .team-wrap {
-  background: var(--white);
+  background: var(--bg);
 }
 .team-grid {
   display: grid;
@@ -727,6 +728,8 @@ h1 .purple {
   gap: 24px;
 }
 .team-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
   background: var(--card-bg);
   border: 1.5px solid var(--border);
   border-radius: 20px;
@@ -740,7 +743,7 @@ h1 .purple {
 }
 .tc-head {
   padding: 28px 24px 20px;
-  background: linear-gradient(160deg, var(--purple-light) 0%, var(--white) 60%);
+  background: var(--bg-navy); border-bottom: 1px solid var(--border);
   position: relative;
 }
 .tc-avatar-img {
@@ -760,7 +763,7 @@ h1 .purple {
   justify-content: center;
   font-weight: 700;
   font-size: 18px;
-  color: #fff;
+  color: var(--text);
   margin-bottom: 14px;
 }
 .tc-avatar.purple {
@@ -790,16 +793,16 @@ h1 .purple {
 }
 .badge-lead {
   background: var(--purple);
-  color: #fff;
+  color: var(--text);
 }
 .badge-core {
-  background: var(--white);
+  background: var(--bg);
   color: var(--purple);
   border: 1.5px solid var(--purple);
 }
 .badge-iit {
   background: #f59e0b;
-  color: #fff;
+  color: var(--text);
   border: none;
   top: 54px;
 }
@@ -821,8 +824,16 @@ h1 .purple {
   color: var(--purple);
 }
 .tc-body {
-  padding: 20px 24px 24px;
-  border-top: 1px solid var(--border);
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 .skill-wrap {
   display: flex;
@@ -907,7 +918,7 @@ h1 .purple {
 .fbtn:hover {
   background: var(--purple);
   border-color: var(--purple);
-  color: #fff;
+  color: var(--text);
 }
 .add-btn {
   background: var(--purple-light) !important;
@@ -1006,7 +1017,7 @@ h1 .purple {
 .pl.demo {
   background: var(--purple);
   border-color: var(--purple);
-  color: #fff;
+  color: var(--text);
 }
 .pl.demo:hover {
   opacity: 0.85;
@@ -1014,7 +1025,7 @@ h1 .purple {
 
 /* ===== ACHIEVEMENTS ===== */
 .hack-wrap {
-  background: var(--white);
+  background: var(--bg);
 }
 .ach-grid {
   display: grid;
@@ -1107,7 +1118,7 @@ h1 .purple {
   padding: 100px 60px;
 }
 .contact-inner h2 {
-  color: #fff;
+  color: var(--text);
 }
 .contact-inner h2 .purple {
   color: rgba(255, 255, 255, 0.6);
@@ -1123,7 +1134,7 @@ h1 .purple {
   background: rgba(255, 255, 255, 0.12);
   border: 1.5px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  color: #fff;
+  color: var(--text);
   font-family: "Inter", sans-serif;
   font-size: 14px;
   outline: none;
@@ -1196,9 +1207,7 @@ footer {
   font-size: 18px;
   letter-spacing: -0.03em;
 }
-.footer-logo .purple {
-  color: var(--purple);
-}
+.footer-logo .purple { color: var(--purple); text-shadow: 0 0 10px rgba(59,130,246,0.3); }
 .footer-motto {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -1236,7 +1245,7 @@ footer {
   display: flex;
 }
 .modal {
-  background: var(--white);
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 36px;
@@ -1312,7 +1321,7 @@ footer {
 .sort-btn:hover {
   background: var(--purple);
   border-color: var(--purple);
-  color: #fff;
+  color: var(--text);
 }
 .add-ach-btn {
   padding: 9px 20px;
@@ -1322,7 +1331,7 @@ footer {
   font-family: "Inter", sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text);
   cursor: pointer;
   transition: opacity 0.2s;
   white-space: nowrap;
@@ -1351,7 +1360,7 @@ footer {
   right: 24px;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--text);
   font-size: 28px;
   cursor: pointer;
   z-index: 10;
@@ -1538,9 +1547,15 @@ footer {
     padding: 80px 24px;
   }
   .stats-bar {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 32px 24px;
-  }
+  background: var(--bg-navy);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 40px 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 100%;
+}
   .about-grid,
   .team-grid,
   .ach-grid {
@@ -1579,7 +1594,7 @@ footer {
 /* --- Hero --- */
 .ach-page-hero {
   background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #a78bfa 100%);
-  color: #fff;
+  color: var(--text);
   padding: 0;
   max-width: 100%;
   position: relative;
@@ -1675,7 +1690,7 @@ footer {
   font-family: var(--font-display);
   font-size: 28px;
   font-weight: 800;
-  color: #fff;
+  color: var(--text);
   line-height: 1;
 }
 .ach-hero-stats .ach-stat-label {
@@ -1729,7 +1744,7 @@ footer {
   font-family: var(--font-display);
   font-size: 40px;
   font-weight: 800;
-  color: #fff;
+  color: var(--text);
   line-height: 1;
 }
 .ach-hero-stats .ach-stat-label {
@@ -1864,7 +1879,7 @@ footer {
 .ach-collage-name {
   font-size: 13px;
   font-weight: 700;
-  color: #0f0f14;
+  color: var(--text);
 }
 .ach-collage-role {
   font-size: 11px;
@@ -1947,7 +1962,16 @@ footer {
   color: #7c3aed;
 }
 .ach-gallery-body {
-  padding: 16px 20px 20px;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 .ach-gallery-top {
   display: flex;
@@ -2047,7 +2071,7 @@ footer {
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.1;
-  color: #0f0f14;
+  color: var(--text);
 }
 .ach-featured-accent {
   background: linear-gradient(to right, #d97706, #f59e0b);
