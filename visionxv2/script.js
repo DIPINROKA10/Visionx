@@ -38,7 +38,7 @@ const TEAM_DATA = [
     ],
     achievements: [
       "10+ Hackathons Participated",
-      "Co-Founder of VisionX",
+      "Co-Founder of TechCraft",
       "4+ Years Learning Data Analytics",
       "Multiple Internship Programs",
     ],
@@ -78,7 +78,7 @@ const TEAM_DATA = [
     ],
     achievements: [
       "IIT Kanpur Certification",
-      "Co-Founder of VisionX",
+      "Co-Founder of TechCraft",
       "AI for Skilling Internship at Capgemini",
     ],
     projects: [
@@ -820,9 +820,9 @@ const ACHIEVEMENTS_DATA = [
   },
   {
     id: 7,
-    title: "VisionX Nexus — Team Hackathon Series",
+    title: "TechCraft — Team Hackathon Series",
     subtitle: "10+ Hackathons",
-    member: "VisionX Nexus",
+    member: "TechCraft",
     type: "team",
     category: "Hackathon",
     desc: "As a team, we've participated in 10+ national and international hackathons across AI, blockchain, and sustainability.",
@@ -912,10 +912,10 @@ const ACHIEVEMENTS_DATA = [
     id: 12,
     title: "Exo Mobile Innovation Hackathon",
     subtitle: "Team Participant",
-    member: "VisionX Nexus",
+    member: "TechCraft",
     type: "team",
     category: "Hackathon",
-    desc: "VisionX Nexus participated in the Exo Mobile Innovation Hackathon — building mobile innovation solutions.",
+    desc: "TechCraft participated in the Exo Mobile Innovation Hackathon — building mobile innovation solutions.",
     image: "certs/images/exo-mobile.jpg",
     date: "2025-12",
   },

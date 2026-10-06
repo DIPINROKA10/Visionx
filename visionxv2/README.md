@@ -1,8 +1,8 @@
-# Vision X
+# TechCraft
 
 > Student innovation team — building digital products & intelligent solutions.
 
-A clean, responsive portfolio website for **Team Vision X**, showcasing team members, projects, hackathon achievements, certificates, and tech stack.
+A clean, responsive portfolio website for **Team TechCraft**, showcasing team members, projects, hackathon achievements, certificates, and tech stack.
 
 ## Features
 
