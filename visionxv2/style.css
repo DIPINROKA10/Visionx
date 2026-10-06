@@ -1439,7 +1439,7 @@ footer {
 }
 .ach-tl-highlight .ach-tl-card {
   border-color: var(--purple);
-  background: #fffbeb;
+  background: rgba(22, 135, 255, 0.05);
 }
 .ach-tl-header {
   display: flex;
@@ -1476,8 +1476,8 @@ footer {
   vertical-align: middle;
 }
 .ach-card-highlight {
-  border-color: #d97706 !important;
-  background: #fffbeb;
+  border-color: var(--purple) !important;
+  background: rgba(22, 135, 255, 0.05);
 }
 
 /* ===== FEATURED CAROUSEL ===== */
