@@ -2357,3 +2357,12 @@ footer {
 .cform .submit-btn:hover {
   background: #38BDF8 !important;
 }
+
+/* ===== BRAND GRADIENT TEXT ===== */
+.brand-gradient {
+  background: linear-gradient(90deg, var(--text) 0%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
