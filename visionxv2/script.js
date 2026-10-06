@@ -621,13 +621,11 @@ function initNavScrollEffect() {
   let lastScroll = 0;
   window.addEventListener("scroll", () => {
     const current = window.pageYOffset;
-    if (current > 100) {
-      nav.style.background = "rgba(7,7,13,.95)";
-      nav.style.borderBottomColor = "var(--border)";
-    } else {
-      nav.style.background = "rgba(7,7,13,.8)";
-      nav.style.borderBottomColor = "var(--border)";
-    }
+    if (current > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
     lastScroll = current;
   });
 
@@ -642,8 +640,11 @@ function initNavScrollEffect() {
       }
     });
     document.querySelectorAll(".nav-links a").forEach((link) => {
-      link.style.color =
-        link.getAttribute("href") === "#" + current ? "#fff" : "";
+      if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
     });
   });
 }

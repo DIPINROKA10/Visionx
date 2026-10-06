@@ -2366,3 +2366,39 @@ footer {
   background-clip: text;
   color: transparent;
 }
+
+
+/* ===== NAV SCROLL & LIGHT/DARK ===== */
+nav {
+  background: rgba(5, 7, 13, 0.7) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(5, 7, 13, 0.95) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] nav {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="light"] nav.scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-links a {
+  transition: color 0.3s;
+}
+
+.nav-links a.active {
+  color: var(--purple) !important;
+}
+
+[data-theme="light"] .nav-links a.active {
+  color: var(--purple) !important;
+}
