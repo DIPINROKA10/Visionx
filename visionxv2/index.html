@@ -504,54 +504,7 @@
       </div>
     </div>
 
-    <!-- MODAL -->
-    <div
-      class="modal-overlay"
-      id="projectModal"
-      onclick="if (event.target === this) closeProjectModal();"
-    >
-      <div class="modal">
-        <button class="modal-close" onclick="closeProjectModal()">✕</button>
-        <div class="modal-title">Add New Project</div>
-        <form class="modal-form" id="projectForm" onsubmit="addProject(event)">
-          <div class="form-row">
-            <input type="text" placeholder="Project Name" id="pName" required />
-            <input
-              type="text"
-              placeholder="Category (e.g. AI · Web)"
-              id="pCat"
-              required
-            />
-          </div>
-          <textarea
-            placeholder="Project description..."
-            id="pDesc"
-            rows="3"
-            required
-          ></textarea>
-          <div class="form-row">
-            <input
-              type="text"
-              placeholder="Tags (comma separated)"
-              id="pTags"
-            />
-            <input
-              type="text"
-              placeholder="Filter (ai / web / blockchain / data)"
-              id="pFilter"
-              required
-            />
-          </div>
-          <div class="form-row">
-            <input type="url" placeholder="GitHub URL (optional)" id="pGit" />
-            <input type="url" placeholder="Demo URL (optional)" id="pDemo" />
-          </div>
-          <button type="submit" class="submit-btn" style="color: var(--purple)">
-            Add Project →
-          </button>
-        </form>
-      </div>
-    </div>
+    
 
     <footer>
       <div>
