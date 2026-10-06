@@ -503,7 +503,7 @@ h1 .purple { color: var(--purple); text-shadow: 0 0 10px rgba(59,130,246,0.3); }
   height: 100%;
   min-height: 500px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 .hero-img-bg {
