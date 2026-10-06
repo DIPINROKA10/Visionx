@@ -2314,3 +2314,45 @@ footer {
 [data-theme="dark"] .sun-and-moon .moon > circle {
   transform: translateX(-7px);
 }
+
+/* ===== REVISED CONTACT STYLES ===== */
+.contact-wrap {
+  background: #05070D !important;
+}
+
+#contact .section-tag {
+  color: #38BDF8 !important;
+}
+
+#contact h2 {
+  color: #F5F7FA;
+}
+
+#contact h2 span.purple, #contact h2 span {
+  color: #1687FF !important;
+}
+
+#contact .section-sub {
+  color: #A7B0C0 !important;
+}
+
+.cform input,
+.cform textarea {
+  background: #0B1020 !important;
+  border: 1.5px solid #1E3A5F !important;
+  color: #F5F7FA !important;
+}
+
+.cform input::placeholder,
+.cform textarea::placeholder {
+  color: #64748B !important;
+}
+
+.cform .submit-btn {
+  background: #1687FF !important;
+  color: #ffffff !important;
+}
+
+.cform .submit-btn:hover {
+  background: #38BDF8 !important;
+}
