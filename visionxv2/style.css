@@ -2266,3 +2266,51 @@ footer {
   background: var(--purple-light);
   color: var(--purple);
 }
+
+/* ===== ANIMATED THEME TOGGLE ===== */
+.theme-toggle-animated {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  padding: 0;
+}
+.theme-toggle-animated:hover {
+  background: var(--purple-light);
+  color: var(--purple);
+  border-color: var(--purple);
+  transform: scale(1.05);
+}
+
+.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center center;
+}
+.sun-and-moon > .sun {
+  transition: transform .5s cubic-bezier(.5,1.25,.75,1.25);
+}
+.sun-and-moon > .sun-beams {
+  transition: transform .5s cubic-bezier(.5,1.5,.75,1.25), opacity .5s cubic-bezier(.25,0,.3,1);
+}
+.sun-and-moon .moon > circle {
+  transition: transform .25s cubic-bezier(0,0,0,1);
+}
+
+[data-theme="dark"] .sun-and-moon > .sun {
+  transform: scale(1.75);
+}
+[data-theme="dark"] .sun-and-moon > .sun-beams {
+  opacity: 0;
+  transform: rotate(-25deg);
+}
+[data-theme="dark"] .sun-and-moon .moon > circle {
+  transform: translateX(-7px);
+}
