@@ -239,10 +239,10 @@ nav {
   color: var(--text);
 }
 .nav-logo-img {
-  width: 36px;
   height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: auto;
+  border-radius: 0;
+  object-fit: contain;
 }
 .nav-links {
   display: flex;
