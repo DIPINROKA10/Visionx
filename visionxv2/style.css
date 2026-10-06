@@ -600,7 +600,7 @@ h1 .purple { color: var(--purple); text-shadow: 0 0 10px rgba(59,130,246,0.3); }
 .hero-cta-pill {
   margin-top: 4px;
   padding: 7px 14px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--border);
   border-radius: 20px;
   font-size: 11px;
   font-weight: 600;
@@ -1371,7 +1371,7 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--border);
   transition: background 0.2s;
 }
 .lightbox-close:hover {
@@ -1606,7 +1606,7 @@ footer {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 0;
@@ -1624,7 +1624,7 @@ footer {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--muted);
   margin-bottom: 16px;
 }
 .ach-hero-logo {
@@ -1633,15 +1633,15 @@ footer {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.06);
+  border: 2px solid var(--border);
+  box-shadow: none;
 }
 .ach-hero-label {
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--muted);
   margin-bottom: 24px;
 }
 .ach-hero-title {
@@ -1659,7 +1659,7 @@ footer {
 }
 .ach-hero-desc {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
   margin-top: 12px;
   max-width: 420px;
   margin-left: auto;
@@ -1680,8 +1680,8 @@ footer {
   gap: 28px;
   margin-top: 32px;
   padding: 20px 36px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: 16px;
   max-width: fit-content;
   margin-left: auto;
@@ -1697,14 +1697,14 @@ footer {
 .ach-hero-stats .ach-stat-label {
   font-size: 9px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 .ach-hero-stats .ach-stat-divider {
   width: 1px;
   height: 28px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--border);
 }
 
 /* --- Back Link --- */
@@ -1733,8 +1733,8 @@ footer {
   gap: 40px;
   margin-top: 48px;
   padding: 28px 48px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: 20px;
   backdrop-filter: blur(12px);
   max-width: fit-content;
@@ -1751,14 +1751,14 @@ footer {
 .ach-hero-stats .ach-stat-label {
   font-size: 10px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 .ach-hero-stats .ach-stat-divider {
   width: 1px;
   height: 36px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--border);
 }
 
 /* --- Back Link --- */
@@ -1768,7 +1768,7 @@ footer {
   gap: 6px;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--muted);
   margin-bottom: 32px;
   transition: color 0.2s;
   letter-spacing: 0.02em;
