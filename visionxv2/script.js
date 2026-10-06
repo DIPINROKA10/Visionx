@@ -202,8 +202,8 @@ const TEAM_DATA = [
 /* ===== PROJECT DATA ===== */
 const PROJECT_DATA = [
   {
-    cat: "Blockchain · Supply Chain",
-    name: "TraceChain",
+    type: "Prototype",
+      name: "TraceChain",
     desc: "Blockchain-powered supply chain transparency platform for secure, immutable product tracking across the entire ecosystem.",
     tags: ["React", "JavaScript", "Blockchain"],
     links: [
@@ -221,7 +221,7 @@ const PROJECT_DATA = [
     filter: "blockchain",
   },
   {
-    cat: "Trade Intelligence",
+    type: "Hackathon Project",
     name: "Tariff Weaver",
     desc: "Intelligent tariff analysis platform simplifying regulatory insights and trade cost estimation for businesses.",
     tags: ["React", "Data Viz"],
@@ -240,8 +240,8 @@ const PROJECT_DATA = [
     filter: "web",
   },
   {
-    cat: "AI · DevOps",
-    name: "RootPilot AI",
+    type: "Prototype",
+      name: "RootPilot AI",
     desc: "AI-powered incident root cause analyzer for SRE and DevOps teams — monitors logs, detects failures, and recommends fixes.",
     tags: ["React", "FastAPI", "Gemini AI", "Tailwind"],
     links: [
@@ -254,7 +254,7 @@ const PROJECT_DATA = [
     filter: "ai",
   },
   {
-    cat: "Full Stack",
+    type: "Internal Product",
     name: "Food Court App",
     desc: "A full-stack food court management application built with modern web technologies.",
     tags: ["React", "Node.js", "MongoDB"],
@@ -273,8 +273,8 @@ const PROJECT_DATA = [
     filter: "web",
   },
   {
-    cat: "AI · Sustainability",
-    name: "EcoTwin AI",
+    type: "Prototype",
+      name: "EcoTwin AI",
     desc: "Digital twin platform that simulates environmental and financial outcomes for logistics networks — predict carbon reduction, cost savings, and ESG scores before making capital decisions.",
     tags: ["React", "AI", "Data Viz", "Sustainability"],
     links: [
@@ -287,8 +287,8 @@ const PROJECT_DATA = [
     filter: "ai",
   },
   {
-    cat: "Sustainability · Web",
-    name: "CarbonTrace",
+    type: "Hackathon Project",
+      name: "CarbonTrace",
     desc: "Track your carbon footprint across travel, energy, and food. Get personalized insights and AI-driven recommendations to reduce emissions and live sustainably.",
     tags: ["React", "AI", "Data Viz", "Carbon Tracking"],
     links: [
@@ -965,7 +965,7 @@ function renderAchievements(filter) {
             <div class="ach-gallery-sub">${a.subtitle}</div>
             <div class="ach-gallery-member">${a.member}</div>
             <div class="ach-gallery-desc">${a.desc}</div>
-            ${a.pdf ? `<div style="margin-top:8px"><a href="${a.pdf}" target="_blank" style="font-size:12px;color:var(--purple);font-weight:600;text-decoration:none">View Certificate PDF →</a></div>` : ""}
+            ${a.pdf ? `<div style="margin-top:8px"><a href="${a.pdf}" target="_blank" style="font-size:12px;color:var(--accent);font-weight:600;text-decoration:none">View Certificate PDF →</a></div>` : ""}
           </div>
         </div>`;
       }
@@ -985,7 +985,7 @@ function renderAchievements(filter) {
         <div class="ach-gallery-sub">${a.subtitle}</div>
         <div class="ach-gallery-member">${a.member}</div>
         <div class="ach-gallery-desc">${a.desc}</div>
-        <div class="ach-gallery-date">${formatDate(a.date)}${a.pdf ? ` &middot; <a href="${a.pdf}" target="_blank" style="color:var(--purple);font-weight:600;text-decoration:none">PDF</a>` : ""}</div>
+        <div class="ach-gallery-date">${formatDate(a.date)}${a.pdf ? ` &middot; <a href="${a.pdf}" target="_blank" style="color:var(--accent);font-weight:600;text-decoration:none">PDF</a>` : ""}</div>
       </div>
     </div>`;
     })
