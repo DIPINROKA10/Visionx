@@ -2150,3 +2150,41 @@ footer {
     height: 10px;
   }
 }
+
+.btn-secondary {
+  padding: 13px 24px;
+  background: transparent;
+  color: var(--purple);
+  border: 1.5px solid var(--purple);
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-secondary:hover {
+  background: var(--purple-light);
+}
+
+.values-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.values-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+  .values-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .values-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .values-grid-4, .values-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
