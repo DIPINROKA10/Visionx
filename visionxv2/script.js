@@ -1,3 +1,21 @@
+
+/* ===== THEME TOGGLE ===== */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById("themeToggle");
+  if (!toggleBtn) return;
+  
+  // Check local storage or system preference
+  const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  
+  toggleBtn.addEventListener("click", () => {
+    let theme = document.documentElement.getAttribute("data-theme");
+    let newTheme = theme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  });
+}
+
 /* ===== TEAM DATA ===== */
 const TEAM_DATA = [
   {
@@ -296,6 +314,7 @@ const DOM = {
 /* ===== INIT ===== */
 document.addEventListener("DOMContentLoaded", () => {
   initLoader();
+  initThemeToggle();
   initMobileNav();
   initRevealAnimations();
   initProjectFilter();

@@ -2212,3 +2212,57 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-navy: #f8fafc;
+  --text: #0f0f14;
+  --muted: #6b6b80;
+  --card-bg: #fafafe;
+  --border: rgba(59, 130, 246, 0.2);
+  --purple-light: rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="light"] body {
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+}
+
+[data-theme="light"] nav {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="light"] .hero-input {
+  background: var(--white);
+  color: var(--text);
+}
+
+[data-theme="light"] .nav-logo {
+  color: var(--text);
+}
+
+[data-theme="light"] .nav-links a:hover {
+  color: var(--purple);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: 12px;
+  font-size: 14px;
+}
+.theme-toggle:hover {
+  background: var(--purple-light);
+  color: var(--purple);
+}
